@@ -35,6 +35,8 @@
 
 #include <iostream>
 using namespace std;
+
+//特定のコードに対する警告をオフにする
 #pragma warning (disable: 4996)
 
 int H, W;
@@ -47,6 +49,7 @@ int main() {
     cin >> H >> W;
     for (int i = 1; i <= H; i++) {
         for (int j = 1; j <= W; j++) {
+            //%dは十進数、データを格納する
             scanf("%d", &A[i][j]);
         }
     }
