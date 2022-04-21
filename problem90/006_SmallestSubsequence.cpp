@@ -41,9 +41,11 @@ int N, K;
 int nex[100009][26];
 
 int main() {
+    //入力
     cin >> N >> K;
     cin >> S;
     
+    //前計算
     for (int i = 0; i < 26; i++) nex[S.size()][i] = S.size();
     for (int i = (int)S.size() - 1; i >= 0; i--) {
         for (int j = 0; j < 26; j++) {
@@ -56,6 +58,7 @@ int main() {
         }
     }
     
+    //貪欲法
     string Answer = "";
     int CurrentPos = 0;
     for (int i = 1; i <= K; i++) {
@@ -70,6 +73,7 @@ int main() {
         }
     }
     
+    //出力
     cout << Answer << endl;
     return 0;
 }
